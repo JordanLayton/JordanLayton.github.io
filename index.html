@@ -5,50 +5,58 @@
         <title>Jordan's Website</title>
     </head>
     <style>
+        html {
+        position: relative;
+        min-height: 100%;
+    }
+    
+    footer {
+        background-color: blue;
+        color: white;
+        font-size: 50%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 100px;
+        width: 100%;
+        overflow: hidden;
+        padding: 10px;
+        text-decoration: none;
+    }
         body {
             background-color: white;
             color: black;
-            padding: 10px;
             font-size: 150%;
+            
+            margin: 0 0 100px;
+            /* bottom = footer height */
+            padding: 25px;
         }
-        h1,h2 {
+        h1 {
+            color: blue;
             text-align: center;
+            font-family: "courier", monospace;
         }
         h2 {
+            text-align: center;
             color: blue;
+            font-family: "courier", monospace;
+        }
+        h3 {
+            font-family: "courier", monospace;
         }
         P {
-            
-        }
-        .tittle {
-            font-family: "courier", monospace;
-            top: 0;
-            left: 0;
-            text-align: center;
-            padding-top: 0%;
-            padding-bottom: 0px;
+            padding-left: 40px;
+            padding-right: 40px;
         }
         .line {
             border-bottom: 2px solid blue;
-            padding-bottom: 20px;
-        }
-        .subtittle {
-            font-family: "courier", monospace;
-        }
-        .content {
-            /*float: right;*/
-        }
-        .about-the-site {
-            /*float: left;*/
-        }
-        .about-me {
-            /*float: none;*/
         }
     </style>
     <body>
         <div id="tittle" class="tittle">
             <h1>Jordan's Website</h1>
-            <p>
+            <p style="text-align: center;">
                 a little about me and my journey into coding,<em> me me me.</em>
             </p>
             
@@ -61,8 +69,17 @@
                 <a href="https://jordanlayton.github.io/about-me">About Me</a><br>
                 <a href="https://jordanlayton.github.io/family-and-friends">Family and Friends</a><br>
                 <a href="https://jordanlayton.github.io/how-i-started-coding">How I Started Coding</a>
-                
             </p>
         </div>
+        
+        <footer>
+            <p style="float: left">
+                Website made by Jordan Layton
+            </p>
+            <p style="float: right;">
+            <a href="https://jordanlayton.github.io/contact-me" style="text-decoration: none; color: white;">Contact Me </a><br>
+            <a href="https://jordanlayton.github.io/how-i-made-this-site" style="text-decoration: none; color: white;">How I made This Site</a>
+            </p>
+        </footer>
     </body>
 </html>
