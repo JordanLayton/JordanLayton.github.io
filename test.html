@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Jordan's Website</title>
+    </head>
+    <style>
+        body {
+            font-size: 150%;
+        }
+        .nav ul {
+            font-family: arial;
+            font-weight: bold;
+            text-transform: uppercase;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top:0;
+            height: 26px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: lightgrey;
+        }
+        .nav li {
+            float: left;
+        }
+        .nav li a {
+            display: block;
+            color: grey;
+            text-align: center;
+            padding: 4px 16px 0px 16px;
+            text-decoration: none;
+        }
+        .nav li a:hover:not(.active) {
+            color: blue;
+        }
+        .nav .active {
+            color: blue;
+        }
+        .nav li:last-child {
+            float: right;
+        }
+        .mirror {
+            background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 34%, rgba(155, 155, 155, 1));
+        -webkit-background-clip: text;
+        color: transparent;
+        transform: rotateX(180deg);
+        }
+        .nav-mirror ul {
+            font-family: arial;
+            font-weight: bold;
+            text-transform: uppercase;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 20px;
+            height: 26px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .nav-mirror li {
+            float: left;
+        }
+        .nav-mirror li a {
+            display: block;
+            text-align: center;
+            padding: 4px 16px 0px 16px;
+            text-decoration: none;
+        }
+        .nav-mirror li a:hover:not(.active) {
+            background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 34%, rgba(0, 0, 255, 1));
+        -webkit-background-clip: text;
+            color: transparent;
+        }
+        .nav-mirror .active {
+            background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 34%, rgba(0, 0, 255, 1));
+        -webkit-background-clip: text;
+        color: transparent;
+        
+        }
+        .nav-mirror li:last-child {
+            float: right;
+        }
+        
+        .footer {
+            background-color: darkgrey;
+            color: white;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            overflow: hidden;
+        }
+        .footer p {
+            font-family: arial;
+            padding-left: 5px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    </style>
+    <body>
+        
+        <div class="nav">
+            <ul>
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="#news">About Me</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+        <div class="nav-mirror">
+            <ul>
+                <li><a class="mirror active" href="#home">Home</a></li>
+                <li><a class="mirror" href="#about">About Me</a></li>
+                <li><a class="mirror" href="#contact">Contact</a></li>
+                <li><a class="mirror" href="#about">About</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+            <p>
+                Website made by Jordan Layton
+            </p>
+            <p>
+            </p>
+        </div>
+        
+    </body>
+</html>
