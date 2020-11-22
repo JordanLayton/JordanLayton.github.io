@@ -1,10 +1,10 @@
-html {
+  html {
                 position: relative;
                 min-height: 100%;
                 font-family: "arial";
             }
             body {
-                font-size: 150%;
+                font-size: 200%;
                 background-color: white;
                 font-family: "arial";
             }
@@ -16,7 +16,7 @@ html {
                 width: 100%;
                 left: 0;
                 top: 0px;
-                height: 47px;
+                height: 57px;
                 list-style-type: none;
                 margin: 0;
                 padding: 0;
@@ -63,7 +63,7 @@ html {
                 position: absolute;
                 width: 100%;
                 left: 0;
-                top: 20px;
+                top: 25px;
                 height: 26px;
                 list-style-type: none;
                 margin: 0;
@@ -168,3 +168,4 @@ html {
             .enter a:hover {
                 color: blue;
             }
+            
