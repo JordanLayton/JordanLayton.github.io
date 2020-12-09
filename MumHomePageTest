@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+
+        }
+        
+        .header {
+            text-align: center;
+            background: white;
+            color: lightblue;
+            width: 100%;
+        }
+        .header h1 {
+            font-size: 200%;
+            font-family: cookie,cursive;
+        }
+    
+        body {
+            margin: 0;
+        }
+        ul.topnav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: lightgrey;
+            font-family: cookie,cursive;
+        }    
+        ul.topnav li {
+            float: left;
+            
+        }
+        ul.topnav li a {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            
+        }
+        ul.topnav li a:hover:not(.active) {
+            background-color: darkgrey;
+        }
+        ul.topnav li a.active {
+            background-color: grey;
+            color: white;
+        }
+        ul.topnav li.right {
+            float: right;
+        }
+        /*
+        @media screen and (max-width: 600px) {
+            ul.topnav li.right, 
+            ul.topnav li{float: none;
+        }}
+        */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: lightgrey;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+        .dropdown-content a:hover {background-color: #f1f1f1;}
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .body * {
+            box-sizing: border-box;
+        }
+        .body {
+            font-family: Arial;
+            padding: 10px;
+            background: lightblue;
+        }
+        .body h2,h3{
+            font-family: cookie,cursive; 
+        }
+        
+        /* Create two unequal columns that floats next to each other */
+        /* Left column */
+        .body .leftcolumn {   
+            float: left;
+            width: 75%;
+        }
+
+        /* Right column */
+        .body .rightcolumn {
+            float: left;
+            width: 25%;
+            background-color: lightblue;
+            padding-left: 20px;
+        }
+
+        /* Fake image */
+        .body .fakeimg {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* Add a card effect for articles */
+        .body .card {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        /* Clear floats after the columns */
+        .body .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Footer */
+        .body .footer {
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+            margin-top: 20px;
+        }
+
+        /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+        
+        /*
+        @media screen and (max-width: 800px) {
+        .leftcolumn, .rightcolumn {   
+            width: 100%;
+            padding: 0;
+            }
+        }
+        */
+
+    </style>
+</head>
+<body>
+    
+    <div class="header">
+        <img src="https://static.wixstatic.com/media/2414ef_8a539220e66d47c8859eaa3aafb4900b.png/v1/fill/w_560,h_309,al_c,q_85,usm_0.66_1.00_0.01/2414ef_8a539220e66d47c8859eaa3aafb4900b.webp" width="50%">
+        <h1>Bred with Love and Care</h1>
+        
+    </div>
+    
+    <ul class="topnav">
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </li>
+</ul>
+
+    <div class="body">
+        <div class="row">
+            <div class="leftcolumn">
+                <div class="card">
+                    <h2>TITLE HEADING</h2>
+                    <h5>Title description, Dec 7, 2017</h5>
+                    <div class="fakeimg" style="height:200px;">Image</div>
+                    <p>Some text..</p>
+                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                </div>
+                <div class="card">
+                    <h2>TITLE HEADING</h2>
+                    <h5>Title description, Sep 2, 2017</h5>
+                    <div class="fakeimg" style="height:200px;">Image</div>
+                    <p>Some text..</p>
+                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                </div>
+            </div>
+            <div class="rightcolumn">
+                <div class="card">
+                    <h2>About Me</h2>
+                    <div class="fakeimg" style="height:100px;">Image</div>
+                    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+                </div>
+                <div class="card">
+                    <h3>Popular Post</h3>
+                    <div class="fakeimg"><p>Image</p></div>
+                    <div class="fakeimg"><p>Image</p></div>
+                    <div class="fakeimg"><p>Image</p></div>
+                </div>
+                <div class="card">
+                    <h3>Follow Me</h3>
+                    <p>Some text..</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h2>Footer</h2>
+    </div>
+
+</body>
+</html>
