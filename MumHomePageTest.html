@@ -50,12 +50,12 @@
         ul.topnav li.right {
             float: right;
         }
-        /*
-        @media screen and (max-width: 600px) {
+        
+        @media screen and (max-width: 800px) {
             ul.topnav li.right, 
-            ul.topnav li{float: none;
-        }}
-        */
+            ul.topnav li {float: none;}
+	}
+
         .dropdown-content {
             display: none;
             position: absolute;
@@ -76,7 +76,7 @@
             display: block;
         }
         
-        .body * {
+        * {
             box-sizing: border-box;
         }
         .body {
@@ -90,13 +90,13 @@
         
         /* Create two unequal columns that floats next to each other */
         /* Left column */
-        .body .leftcolumn {   
+        .leftcolumn {   
             float: left;
             width: 75%;
         }
 
         /* Right column */
-        .body .rightcolumn {
+        .rightcolumn {
             float: left;
             width: 25%;
             background-color: lightblue;
@@ -104,28 +104,28 @@
         }
 
         /* Fake image */
-        .body .fakeimg {
+        .fakeimg {
             background-color: #aaa;
             width: 100%;
             padding: 20px;
         }
 
         /* Add a card effect for articles */
-        .body .card {
+        .card {
             background-color: white;
             padding: 20px;
             margin-top: 20px;
         }
 
         /* Clear floats after the columns */
-        .body .row:after {
+        .row:after {
             content: "";
             display: table;
             clear: both;
         }
 
         /* Footer */
-        .body .footer {
+        .footer {
             padding: 20px;
             text-align: center;
             background: #ddd;
@@ -135,7 +135,7 @@
         /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
         
         
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 900px) {
         .leftcolumn, .rightcolumn {   
             width: 100%;
             padding: 0;
@@ -170,6 +170,8 @@
     </div>
   </li>
 </ul>
+
+
 
     <div class="body">
         <div class="row">
