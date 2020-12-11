@@ -1,225 +1,208 @@
 <!DOCTYPE html>
-    <html>
-    <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <title>Janeissa Main Coons / Home Page</title>
-    <style>
-        body {
+<html>
+    	<head>
+    		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+    	<style>
+        		body {
 
-        }
-        
-        .header {
-            text-align: center;
-            background: white;
-            color: lightblue;
-            width: 100%;
-        }
-        .header h1 {
-            font-family: cookie,cursive;
-        }
-    
-        body {
-            margin: 0;
-        }
-        ul.topnav {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: lightgrey;
-            font-family: cookie,cursive;
-        }    
-        ul.topnav li {
-            float: left;
-            
-        }
-        ul.topnav li a {
-            display: block;
-            color: black;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            
-        }
-        ul.topnav li a:hover:not(.active) {
-            background-color: darkgrey;
-        }
-        ul.topnav li a.active {
-            background-color: grey;
-            color: white;
-        }
-        ul.topnav li.right {
-            float: right;
-        }
-    
-        @media screen and (max-width: 800px) {
-            ul.topnav li.right, 
-            ul.topnav li {float: none;}
-	}
-	
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: lightgrey;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: center;
-        }
-        .dropdown-content a:hover {background-color: #f1f1f1;}
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        
-        * {
-            box-sizing: border-box;
-        }
-        .body {
-            font-family: Arial;
-            padding: 10px;
-            background: lightblue;
-        }
-        .body h2,h3{
-            font-family: cookie,cursive; 
-        }
-        
+        		}
+       		 .header {
+            		text-align: center;
+            		background: white;
+            		color: lightblue;
+            		width: 100%;
+        		}
+        		.header h1 {
+            		font-family: cookie,cursive;
+        		}
+        		body {
+            		margin: 0;
+        		}
+        		ul.topnav {
+            		list-style-type: none;
+            		margin: 0;
+            		padding: 0;
+            		overflow: hidden;
+            		background-color: lightgrey;
+            		font-family: cookie,cursive;
+        		}    
+        			ul.topnav li {
+            		float: left;
+        		}
+        			ul.topnav li a {
+            		display: block;
+            		color: black;
+            		text-align: center;
+            		padding: 14px 16px;
+            		text-decoration: none;   
+        		}
+        			ul.topnav li a:hover:not(.active) {
+            		background-color: darkgrey;
+        		}
+        			ul.topnav li a.active {
+            		background-color: grey;
+            		color: white;
+        		}
+        			ul.topnav li.right {
+            		float: right;
+        		}
+        		@media screen and (max-width: 800px) {
+            		ul.topnav li.right, 
+            		ul.topnav li {float: none;}
+		}
+        		.dropdown-content {
+            		display: none;
+            		position: absolute;
+            		background-color: lightgrey;
+            		min-width: 160px;
+            		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            		z-index: 1;
+        		}
+        		.dropdown-content a {
+            		color: black;
+            		padding: 12px 16px;
+            		text-decoration: none;
+            		display: block;
+            		text-align: center;
+        		}
+        			.dropdown-content a:hover {background-color: #f1f1f1;}
+        			.dropdown:hover .dropdown-content {
+            		display: block;
+        		}
+        		* {
+            		box-sizing: border-box;
+        		}
+        		.body {
+            		font-family: Arial;
+            		padding: 10px;
+            		background: lightblue;
+        		}
+        		.body h2,h3{
+            		font-family: cookie,cursive; 
+        		}
         /* Create two unequal columns that floats next to each other */
         /* Left column */
-        .leftcolumn {   
-            float: left;
-            width: 75%;
-        }
-
+        		.leftcolumn {   
+            		float: left;
+            		width: 75%;
+        		}
         /* Right column */
-        .rightcolumn {
-            float: left;
-            width: 25%;
-            background-color: lightblue;
-            padding-left: 20px;
-        }
-
+        		.rightcolumn {
+            		float: left;
+            		width: 25%;
+            		background-color: lightblue;
+            		padding-left: 20px;
+        		}
         /* Fake image */
-        .fakeimg {
-            background-color: #aaa;
-            width: 100%;
-            padding: 20px;
-        }
-
+        		.fakeimg {
+            		background-color: #aaa;
+            		width: 100%;
+            		padding: 20px;
+        		}
         /* Add a card effect for articles */
-        .card {
-            background-color: white;
-            padding: 20px;
-            margin-top: 20px;
-        }
-
+        		.card {
+            		background-color: white;
+            		padding: 20px;
+            		margin-top: 20px;
+        		}
         /* Clear floats after the columns */
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
+        		.row:after {
+            		content: "";
+            		display: table;
+            		clear: both;
+        		}
         /* Footer */
-        .footer {
-            padding: 20px;
-            text-align: center;
-            background: #ddd;
-            margin-top: 20px;
-        }
-
+        		.footer {
+            		padding: 20px;
+            		text-align: center;
+            		background: #ddd;
+            		margin-top: 20px;
+        		}
         /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-        
-        
-        @media screen and (max-width: 900px) {
-        .leftcolumn, .rightcolumn {   
-            width: 100%;
-            padding: 0;
-            }
-        }
-     
-
-    </style>
-</head>
+        		@media screen and (max-width: 900px) {
+        			.leftcolumn, .rightcolumn {   
+            			width: 100%;
+            			padding: 0;
+            		}
+       		}
+</style>
 <body>
     
-    <div class="header">
-        <img src="https://static.wixstatic.com/media/2414ef_8a539220e66d47c8859eaa3aafb4900b.png/v1/fill/w_560,h_309,al_c,q_85,usm_0.66_1.00_0.01/2414ef_8a539220e66d47c8859eaa3aafb4900b.webp" width="40%">
-        <h1 style="font-size:3vw;">Bred with Love and Care</h1>
-        
-    </div>
+    		<div class="header">
+        			<img src="https://static.wixstatic.com/media/2414ef_8a539220e66d47c8859eaa3aafb4900b.png/v1/fill/w_560,h_309,al_c,q_85,usm_0.66_1.00_0.01/2414ef_8a539220e66d47c8859eaa3aafb4900b.webp" width="40%">
+       			 <h1 style="font-size:3vw;">Bred with Love and Care</h1>
+    		</div>
     
-    <ul class="topnav">
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="AboutUs">About Us</a></li>
-  <li><a href="#OurNews">News</a></li>
-  <li><a href="Boys">Boys</a></li>
-  <li><a href="Girls">Girls</a></li>
-  <li><a href="Kittens">Kittens</a></li>
-  <li><a href="AdultsLookingForAHome">Adults Looking for a Home</a></li>
-	<li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn">More</a>
-    <div class="dropdown-content">
-      <a href="Gallery">Gallery</a>
-      <a href="Links">Links</a>
-      <a href="Testimonials">Testimonials</a>
-    </div>
-  </li>
+    		<ul class="topnav">
+  			<li><a class="active" href="#home">Home</a></li>
+  			<li><a href="AboutUs">About Us</a></li>
+  			<li><a href="#OurNews">News</a></li>
+  			<li><a href="Boys">Boys</a></li>
+  			<li><a href="Girls">Girls</a></li>
+  			<li><a href="Kittens">Kittens</a></li>
+  			<li><a href="AdultsLookingForAHome">Adults Looking for a Home</a></li>
+			<li class="dropdown">
+    				<a href="javascript:void(0)" class="dropbtn">More</a>
+    				<div class="dropdown-content">
+      					<a href="Gallery">Gallery</a>
+      					<a href="Links">Links</a>
+      					<a href="Testimonials">Testimonials</a>
+    				</div>
+  			</li>
 </ul>
 
-
-
-    <div class="body">
-        <div class="row">
-            <div class="leftcolumn">
-                <div class="card">
-                    <h2>Kittens</h2>
-                    <h5>Born 8th May 2020</h5>
-                    <img src="https://static.wixstatic.com/media/2414ef_c4491fb6c30441ef8eebd37143604f40~mv2.jpg/v1/fill/w_324,h_432,al_c,q_80,usm_0.66_1.00_0.01/2414ef_c4491fb6c30441ef8eebd37143604f40~mv2.webp" style="height:200px;">
-                    <p>We are currently mathing them to their new families.</p>
-                    <p>We match our kittens with families from our existing enquirys and therefor it is unlikly this litter will be available to any new enquiries.</p>
-                    <p>If you would like to make a new enquiry visit our <a href="ContactUs">contact us</a> page.</p>
-                </div>
-                <div class="card">
-                    <h2>Adults Looking for a Home</h2>
-                    <h5></h5>
-                    <img src="https://static.wixstatic.com/media/2414ef_f72626a1ca834bb8be0000c72e186dd0~mv2.jpg/v1/fill/w_262,h_193,al_c,q_80,usm_0.66_1.00_0.01/Bo.webp" height="200px">
-                    <p>From time to time, we may have older kittens, or young adult girls and boys looking for new homes.</p>
-                    <p>Currently, Bo and Lady Marmalade are available for rehoming to their forever pet retirement homes.</p>
-			<p>For more information visit the <a href="AdultsLookingForAHome">adults looking for a home</a> page.</p>                
+    		<div class="body">
+        			<div class="row">
+            			<div class="leftcolumn">
+                				<div class="card">
+                    					<h2>Kittens</h2>
+                    					<h5>Born 8th May 2020</h5>
+                    					<img src="https://static.wixstatic.com/media/2414ef_c4491fb6c30441ef8eebd37143604f40~mv2.jpg/v1/fill/w_324,h_432,al_c,q_80,usm_0.66_1.00_0.01/2414ef_c4491fb6c30441ef8eebd37143604f40~mv2.webp" style="height:200px;">
+                    					<p>We are currently mathing them to their new families.</p>
+                    					<p>We match our kittens with families from our existing enquirys and therefor it is unlikly this litter will be available to any new enquiries.</p>
+                    					<p>If you would like to make a new enquiry visit our <a href="ContactUs">contact us</a> page.</p>
+                				</div>
+                				<div class="card">
+                    					<h2>Adults Looking for a Home</h2>
+                    					<h5></h5>
+                    					<img src="https://static.wixstatic.com/media/2414ef_f72626a1ca834bb8be0000c72e186dd0~mv2.jpg/v1/fill/w_262,h_193,al_c,q_80,usm_0.66_1.00_0.01/Bo.webp" height="200px">
+                    					<p>From time to time, we may have older kittens, or young adult girls and boys looking for new homes.</p>
+                    					<p>Currently, Bo and Lady Marmalade are available for rehoming to their forever pet retirement homes.</p>
+						<p>For more information visit the <a href="AdultsLookingForAHome">adults looking for a home</a> page.</p>                
 </div>
-            </div>
-            <div class="rightcolumn">
-                <div class="card">
-                    <h2>About Me</h2>
-                    <div class="fakeimg" style="height:100px;">Image</div>
-                    <p>Some text about me</p>
-                </div>
-                <div class="card">
-                    <h3>Popular Posts</h3>
-                    <div class="fakeimg"> <p>Image</p> </div>
-			<div class="fakeimg"> <p>Image</p> </div>
-			<div class="fakeimg"> <p>Image</p> </div>
-                </div>
-                <div class="card">
-                    <h3>Follow Me</h3>
-                    <a href="Facebook"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAb1BMVEVCZ7L///8qWKz6+vw+ZbE8Y7B5j8Ree7tKbLQvW62Jncvb4e9QcbY+ZLEyXa45YbCWp9Ds7/ZrhsDS2epXd7m3w9+Qos6drdPQ1+ni5/K/yeJkgL6Blsixvtzv8visudqjstZ7ksXH0OZohL+9yOH/Gkr+AAAD+0lEQVR4nO3dW3OqMBSG4QSCEoVExGOth9r+/9+4tdbZu7M7GqVhrZX53pveOTwDgpCEKv3VajItVSqV02V7hanLn61x3hjqDfu1TO2t2v4jbGaWepsiZGfNVTh2BfXWRKnw64uwcekcnt8zxe5TWNXUWxKtYnYW7h31dkTMzU/COtVj9JwptTqmeBr9m23VwlNvRNT8Um1SPkiVqgcqnZ9qP2Yq6i1ACCGEEEIIIYQQQmL6fBiY0NDfNVN775zNsqwoy1LV3mXnrHXWOe+LwohGF86qzWS/aptcf2vXrNvVcbtcLqZVZazM5/WmsNlgu9b3y3eNwKe9xhWjY4Duq0rakVrb2Ut+3yVWaLLN6hGeNKFxVXufJFhY2/3DPlFCN2yeAMoRmmz5jE+Q0D1wgZAoNG78JFCI0BRPfQXlCI0L+YUmWZg9fhWUJbTzDkAJQj/qAhQgNFUnoAChffo6IUToF92A7IXGdQSyF7pt6kLVFchd2H0XMhca2xnIXNj5RMpeaDv84hYh7Ppzhr/QH1IX/sZBylvY/WLIXOhfUxe6B+98m2Y9/r+SsfCBr2F+nAyN/SnOq+6MD955I2u9wMVZZhYIPFgvT3cu9EQzkDmQrc4rrsKAchdHupcQ4IfYPXg6lQaN9kpegR30kO1D7jGqVLYLEL5LXoOdBUy5yIVeJy6FCMeCzzNhQtFfwyDhQfQi7BDhQvLFIkj4mvw+fE1+H44gZB2EEPIPQgj5ByGE/IMQQv5BCCH/IISQR+ZGQUJ/6xMMg6XOwxtVAcLJ7NYnnCJ+q6UZ3jd0LUtd2CQvbGmHbnoQEg9O9SBc0g5s9CAcJS8c0o7z9yAknpkYX5gTj/PHF66TFx6JZzLEF86TF06Ix/njC9+I7x/jC6mnsccXUk+Zii5sqKe9RReST+yLLnxJ/igln9gXXUj+sDG6cEM9Rzq6kHzdWmxhTvugrQch+eUwupD63im+kH6ee2wh9b1TfCH9LPDYQvKLRXQh/cLZyMId+YkmtpD6UWJ8If3l8FR5Ix8wyv126xMU+dfwTiEzFQa3bo+4A7sL2QchhPyDEEL+QQgh/yCEkH8QQsg/CCHkH4QQ8g9CCPkHIYT8gxBC/kEIIf8ghJB/EELIPwgh5B+EEPIPQgj5ByGE/IMQQv5BCCH/IISQfxBCyD8IIeQfhBDyD0IIH4joFZl9CU2p3hMXTtWE5mDvS+gnakXznpe+hLZVOumj1Cit9J7kVTY9Ce38JNQVxTsk+xEWM30Wri3BgdqLsK53n0I9dv3vxT6Evl7ri1A3let7N8YXGrvZ6atQ633hil7/QVRcoam9LT8un/Il1PlqsSl/k3CnuMJyumyvn/IHstJMOhEjrRsAAAAASUVORK5CYII=" 
+            			</div>
+            				<div class="rightcolumn">
+                					<div class="card">
+                    						<h2>About Me</h2>
+                    						<div class="fakeimg" style="height:100px;">Image
+</div>
+                    						<p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+                					</div>
+                					<div class="card">
+                    					<h3>Popular Posts</h3>
+                    					<div class="fakeimg"> <p>Image</p> 
+</div>
+						<div class="fakeimg"> <p>Image</p> 
+</div>
+						<div class="fakeimg"> <p>Image</p> 
+</div>
+                				</div>
+                					<div class="card">
+                    						<h3>Follow Me</h3>
+                    						<a href="Facebook"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAb1BMVEVCZ7L///8qWKz6+vw+ZbE8Y7B5j8Ree7tKbLQvW62Jncvb4e9QcbY+ZLEyXa45YbCWp9Ds7/ZrhsDS2epXd7m3w9+Qos6drdPQ1+ni5/K/yeJkgL6Blsixvtzv8visudqjstZ7ksXH0OZohL+9yOH/Gkr+AAAD+0lEQVR4nO3dW3OqMBSG4QSCEoVExGOth9r+/9+4tdbZu7M7GqVhrZX53pveOTwDgpCEKv3VajItVSqV02V7hanLn61x3hjqDfu1TO2t2v4jbGaWepsiZGfNVTh2BfXWRKnw64uwcekcnt8zxe5TWNXUWxKtYnYW7h31dkTMzU/COtVj9JwptTqmeBr9m23VwlNvRNT8Um1SPkiVqgcqnZ9qP2Yq6i1ACCGEEEIIIYQQQmL6fBiY0NDfNVN775zNsqwoy1LV3mXnrHXWOe+LwohGF86qzWS/aptcf2vXrNvVcbtcLqZVZazM5/WmsNlgu9b3y3eNwKe9xhWjY4Duq0rakVrb2Ut+3yVWaLLN6hGeNKFxVXufJFhY2/3DPlFCN2yeAMoRmmz5jE+Q0D1wgZAoNG78JFCI0BRPfQXlCI0L+YUmWZg9fhWUJbTzDkAJQj/qAhQgNFUnoAChffo6IUToF92A7IXGdQSyF7pt6kLVFchd2H0XMhca2xnIXNj5RMpeaDv84hYh7Ppzhr/QH1IX/sZBylvY/WLIXOhfUxe6B+98m2Y9/r+SsfCBr2F+nAyN/SnOq+6MD955I2u9wMVZZhYIPFgvT3cu9EQzkDmQrc4rrsKAchdHupcQ4IfYPXg6lQaN9kpegR30kO1D7jGqVLYLEL5LXoOdBUy5yIVeJy6FCMeCzzNhQtFfwyDhQfQi7BDhQvLFIkj4mvw+fE1+H44gZB2EEPIPQgj5ByGE/IMQQv5BCCH/IISQR+ZGQUJ/6xMMg6XOwxtVAcLJ7NYnnCJ+q6UZ3jd0LUtd2CQvbGmHbnoQEg9O9SBc0g5s9CAcJS8c0o7z9yAknpkYX5gTj/PHF66TFx6JZzLEF86TF06Ix/njC9+I7x/jC6mnsccXUk+Zii5sqKe9RReST+yLLnxJ/igln9gXXUj+sDG6cEM9Rzq6kHzdWmxhTvugrQch+eUwupD63im+kH6ee2wh9b1TfCH9LPDYQvKLRXQh/cLZyMId+YkmtpD6UWJ8If3l8FR5Ix8wyv126xMU+dfwTiEzFQa3bo+4A7sL2QchhPyDEEL+QQgh/yCEkH8QQsg/CCHkH4QQ8g9CCPkHIYT8gxBC/kEIIf8ghJB/EELIPwgh5B+EEPIPQgj5ByGE/IMQQv5BCCH/IISQfxBCyD8IIeQfhBDyD0IIH4joFZl9CU2p3hMXTtWE5mDvS+gnakXznpe+hLZVOumj1Cit9J7kVTY9Ce38JNQVxTsk+xEWM30Wri3BgdqLsK53n0I9dv3vxT6Evl7ri1A3let7N8YXGrvZ6atQ633hil7/QVRcoam9LT8un/Il1PlqsSl/k3CnuMJyumyvn/IHstJMOhEjrRsAAAAASUVORK5CYII=" 
 width="80px"></a>
-			<p><a href="https://www.facebook.com/janeissamainecoons">JaneissaMaineCoons</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
+<p>< ahref="https://www.facebook.com/janeissamainecoons">JaneissaMaineCoons</a></p>
+                					</div>
+            				</div>
+        				</div>
+    			</div>
 
-    <div class="footer">
-        <h2>Footer</h2>
-    </div>
+    			<div class="footer">
+        			<h2>Footer</h2>
+    			</div>
 
 </body>
 </html>
+
+
