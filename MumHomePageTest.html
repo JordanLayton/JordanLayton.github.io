@@ -2,131 +2,149 @@
 <html>
     	<head>
     		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Janeissa Maine Coons / Home</title>
 	</head>
     	<style>
         		body {
-
+				font-size: 150%;
         		}
        		 .header {
             		text-align: center;
             		background: white;
             		color: lightblue;
             		width: 100%;
-        		}
-        		.header h1 {
+        	}
+        	.header h1 {
             		font-family: cookie,cursive;
-        		}
-        		body {
-            		margin: 0;
-        		}
-        		ul.topnav {
+        	}
+        	body {
+            		margin: 0
+        	}
+        	ul.topnav {
             		list-style-type: none;
             		margin: 0;
             		padding: 0;
             		overflow: hidden;
             		background-color: lightgrey;
             		font-family: cookie,cursive;
-        		}    
-        			ul.topnav li {
+        	}    
+        	ul.topnav li {
             		float: left;
-        		}
-        			ul.topnav li a {
+        	}
+        	ul.topnav li a {
             		display: block;
             		color: black;
             		text-align: center;
             		padding: 14px 16px;
             		text-decoration: none;   
-        		}
-        			ul.topnav li a:hover:not(.active) {
+        	}
+        	ul.topnav li a:hover:not(.active) {
             		background-color: darkgrey;
-        		}
-        			ul.topnav li a.active {
+        	}
+        	ul.topnav li a.active {
             		background-color: grey;
             		color: white;
-        		}
-        			ul.topnav li.right {
+        	}
+        	ul.topnav li.right {
             		float: right;
-        		}
-        		@media screen and (max-width: 800px) {
+        	}
+        	@media screen and (max-width: 800px) {
             		ul.topnav li.right, 
             		ul.topnav li {float: none;}
 		}
-        		.dropdown-content {
+        	.dropdown-content {
             		display: none;
             		position: absolute;
             		background-color: lightgrey;
             		min-width: 160px;
             		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             		z-index: 1;
-        		}
-        		.dropdown-content a {
+        	}
+        	.dropdown-content a {
             		color: black;
             		padding: 12px 16px;
             		text-decoration: none;
             		display: block;
             		text-align: center;
-        		}
-        			.dropdown-content a:hover {background-color: #f1f1f1;}
-        			.dropdown:hover .dropdown-content {
-            		display: block;
-        		}
-        		* {
+        	}
+        	.dropdown-content a:hover {background-color: #f1f1f1;
+		}
+        	.dropdown:hover .dropdown-content {
+            			display: block;
+        	}
+        	* {
             		box-sizing: border-box;
-        		}
-        		.body {
+        	}
+        	.body {
             		font-family: Arial;
-            		padding: 10px;
+            		padding: 20px;
             		background: lightblue;
-        		}
-        		.body h2,h3{
+			font-size: 100%;
+        	}
+        	.body h2,h3{
             		font-family: cookie,cursive; 
-        		}
+        	}
         /* Create two unequal columns that floats next to each other */
         /* Left column */
-        		.leftcolumn {   
+        	.leftcolumn {   
             		float: left;
-            		width: 75%;
-        		}
+            		width: 60%;
+        	}
         /* Right column */
-        		.rightcolumn {
+        	.rightcolumn {
             		float: left;
-            		width: 25%;
+            		width: 40%;
             		background-color: lightblue;
             		padding-left: 20px;
-        		}
+        	}
         /* Fake image */
-        		.fakeimg {
+        	.fakeimg {
             		background-color: #aaa;
             		width: 100%;
             		padding: 20px;
-        		}
+        	}
         /* Add a card effect for articles */
-        		.card {
+        	.card {
             		background-color: white;
-            		padding: 20px;
+            		padding: 40px;
             		margin-top: 20px;
-        		}
+        	}
         /* Clear floats after the columns */
-        		.row:after {
+		.card img{
+			
+		}
+        	.row:after {
             		content: "";
             		display: table;
             		clear: both;
-        		}
+        	}
         /* Footer */
-        		.footer {
-            		padding: 20px;
+        	.footer {
+            		padding: 10px;
             		text-align: center;
             		background: #ddd;
-            		margin-top: 20px;
-        		}
+			font-size: 50%;
+                	left: 0;
+                	bottom: 0;
+                	width: 100%;
+                	overflow: hidden;
+                	font-size: 50%;
+            	}
+            .footer p {
+                font-family: arial;
+                padding-left: 5px;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
         /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-        		@media screen and (max-width: 900px) {
-        			.leftcolumn, .rightcolumn {   
+        	@media screen and (max-width: 900px) {
+        		.leftcolumn, .rightcolumn {   
             			width: 100%;
             			padding: 0;
             		}
        		}
-</style>
+	</style>
+
 <body>
     
     		<div class="header">
@@ -158,7 +176,7 @@
                 				<div class="card">
                     					<h2>Kittens</h2>
                     					<h5>Born 8th May 2020</h5>
-                    					<img src="https://static.wixstatic.com/media/2414ef_c4491fb6c30441ef8eebd37143604f40~mv2.jpg/v1/fill/w_324,h_432,al_c,q_80,usm_0.66_1.00_0.01/2414ef_c4491fb6c30441ef8eebd37143604f40~mv2.webp" style="height:200px;">
+                    					<img src="https://static.wixstatic.com/media/2414ef_c4491fb6c30441ef8eebd37143604f40~mv2.jpg/v1/fill/w_324,h_432,al_c,q_80,usm_0.66_1.00_0.01/2414ef_c4491fb6c30441ef8eebd37143604f40~mv2.webp" width="30%">
                     					<p>We are currently mathing them to their new families.</p>
                     					<p>We match our kittens with families from our existing enquirys and therefor it is unlikly this litter will be available to any new enquiries.</p>
                     					<p>If you would like to make a new enquiry visit our <a href="ContactUs">contact us</a> page.</p>
@@ -166,7 +184,7 @@
                 				<div class="card">
                     					<h2>Adults Looking for a Home</h2>
                     					<h5></h5>
-                    					<img src="https://static.wixstatic.com/media/2414ef_f72626a1ca834bb8be0000c72e186dd0~mv2.jpg/v1/fill/w_262,h_193,al_c,q_80,usm_0.66_1.00_0.01/Bo.webp" height="200px">
+                    					<img src="https://static.wixstatic.com/media/2414ef_f72626a1ca834bb8be0000c72e186dd0~mv2.jpg/v1/fill/w_262,h_193,al_c,q_80,usm_0.66_1.00_0.01/Bo.webp" width="50%">
                     					<p>From time to time, we may have older kittens, or young adult girls and boys looking for new homes.</p>
                     					<p>Currently, Bo and Lady Marmalade are available for rehoming to their forever pet retirement homes.</p>
 						<p>For more information visit the <a href="AdultsLookingForAHome">adults looking for a home</a> page.</p>                
@@ -199,7 +217,8 @@ width="80px"></a>
     			</div>
 
     			<div class="footer">
-        			<h2>Footer</h2>
+					<h2 style="float:left;">Janeissa Maine Coons</h2>
+        				<h2 style="float:right;">Website Designed by Jordan Layton</h2>
     			</div>
 
 </body>
