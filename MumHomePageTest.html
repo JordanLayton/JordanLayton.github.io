@@ -143,6 +143,79 @@
             			padding: 0;
             		}
        		}
+
+	/* Photo Slider */
+	body {  
+            margin: 0;  
+            background: #e6e6e6;  
+        }  
+        .showSlide {  
+            display: none  
+        }  
+            .showSlide img {  
+                width: 100%;  
+            }  
+        .slidercontainer {  
+            max-width: 1000px;  
+            position: relative;  
+            margin: auto;  
+        }  
+        .left, .right {  
+            cursor: pointer;  
+            position: absolute;  
+            top: 50%;  
+            width: auto;  
+            padding: 16px;  
+            margin-top: -22px;  
+            color: white;  
+            font-weight: bold;  
+            font-size: 18px;  
+            transition: 0.6s ease;  
+            border-radius: 0 3px 3px 0;  
+        }  
+        .right {  
+            right: 0;  
+            border-radius: 3px 0 0 3px;  
+        }  
+            .left:hover, .right:hover {  
+                background-color: rgba(115, 115, 115, 0.8);  
+            }  
+        .content {  
+            color: #eff5d4;  
+            font-size: 30px;  
+            padding: 8px 12px;  
+            position: absolute;  
+            top: 10px;  
+            width: 100%;  
+            text-align: center;  
+        }  
+        .active {  
+            background-color: #717171;  
+        }  
+        /* Fading animation */  
+        .fade {  
+            -webkit-animation-name: fade;  
+            -webkit-animation-duration: 1.5s;  
+            animation-name: fade;  
+            animation-duration: 1.5s;  
+        }  
+        @-webkit-keyframes fade {  
+            from {  
+                opacity: .4  
+            }  
+            to {  
+                opacity: 1  
+            }  
+        }  
+  
+        @keyframes fade {  
+            from {  
+                opacity: .4  
+            }  
+            to {  
+                opacity: 1  
+            }  
+        }  
 	</style>
 
 <body>
@@ -176,7 +249,52 @@
                 				<div class="card">
                     					<h2>Kittens</h2>
                     					<h5>Born 8th May 2020</h5>
-                    					<img src="https://static.wixstatic.com/media/2414ef_c4491fb6c30441ef8eebd37143604f40~mv2.jpg/v1/fill/w_324,h_432,al_c,q_80,usm_0.66_1.00_0.01/2414ef_c4491fb6c30441ef8eebd37143604f40~mv2.webp" width="30%">
+                    					<div class="slidercontainer">  
+        <div class="showSlide fade">  
+            <img src="https://static.wixstatic.com/media/2414ef_63d612c3751c4fac8fb29be72c7c03d1.jpg/v1/fill/w_480,h_358,al_c,q_80,usm_0.66_1.00_0.01/2414ef_63d612c3751c4fac8fb29be72c7c03d1.webp" />  
+            <div class="content">Slide1 heading</div>  
+        </div>  
+        <div class="showSlide fade">  
+            <img src="https://static.wixstatic.com/media/2414ef_12ceba08e170472e8ef7612669412c52.jpg/v1/fill/w_480,h_360,al_c,q_80,usm_0.66_1.00_0.01/2414ef_12ceba08e170472e8ef7612669412c52.webp" />  
+            <div class="content">Slide2 heading</div>  
+        </div>  
+  
+        <div class="showSlide fade">  
+            <img src="https://static.wixstatic.com/media/2414ef_63d612c3751c4fac8fb29be72c7c03d1.jpg/v1/fill/w_480,h_358,al_c,q_80,usm_0.66_1.00_0.01/2414ef_63d612c3751c4fac8fb29be72c7c03d1.webp" />  
+            <div class="content">Slide3 heading</div>  
+        </div>  
+        <div class="showSlide fade">  
+            <img src="https://static.wixstatic.com/media/2414ef_12ceba08e170472e8ef7612669412c52.jpg/v1/fill/w_480,h_360,al_c,q_80,usm_0.66_1.00_0.01/2414ef_12ceba08e170472e8ef7612669412c52.webp" />  
+            <div class="content">Slide4 heading</div>  
+        </div>  
+        <!-- Navigation arrows -->  
+        <a class="left" onclick="nextSlide(-1)">❮</a>  
+        <a class="right" onclick="nextSlide(1)">❯</a>  
+    </div>  
+  
+    <script type="text/javascript">  
+        var slide_index = 1;  
+        displaySlides(slide_index);  
+  
+        function nextSlide(n) {  
+            displaySlides(slide_index += n);  
+        }  
+  
+        function currentSlide(n) {  
+            displaySlides(slide_index = n);  
+        }  
+  
+        function displaySlides(n) {  
+            var i;  
+            var slides = document.getElementsByClassName("showSlide");  
+            if (n > slides.length) { slide_index = 1 }  
+            if (n < 1) { slide_index = slides.length }  
+            for (i = 0; i < slides.length; i++) {  
+                slides[i].style.display = "none";  
+            }  
+            slides[slide_index - 1].style.display = "block";  
+        }  
+    </script>  
                     					<p>We are currently mathing them to their new families.</p>
                     					<p>We match our kittens with families from our existing enquirys and therefor it is unlikly this litter will be available to any new enquiries.</p>
                     					<p>If you would like to make a new enquiry visit our <a href="ContactUs">contact us</a> page.</p>
