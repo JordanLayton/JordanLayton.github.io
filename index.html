@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jordans Website / Home</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+    <style>
+        
+    </style>
+    <body>
+        <div class="header">
+            <h1>Jordan's Website</h1>
+        </div>
+        
+        <ul class="topnav">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="about-me.html">About Me</a></li>
+            <li><a href="how-i-started-coding.html">How I Started Coding</a></li>
+            <li class="nav-right"><a href="contact-me.html">Contact Me</a></li>
+            <!--
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">More</a>
+                <div class="dropdown-content">
+                      <a href="Gallery">More</a>
+                      <a href="Links">More</a>
+                      <a href="Testimonials">More</a>
+                </div>
+            </li>
+            -->
+        </ul>
+
+        <div class="body">
+            <div class="row">
+                <div class="leftcolumn">
+                    <div class="card">
+                        <h2>Welcome To My Website</h2>
+                        <h5>Updated 21st December 2021</h5>
+                        <p>This website has taken many forms throughout my journey of coding.</p>
+                        <p>The current layout was originally intended for someone else. However they preferred the site they originally made.</p>
+                        <p>Regardless of how this site came to be I am very proud to be sharing it with you.</p>
+                        <div class="slidercontainer">  
+                            <div class="showSlide fade">  
+                                <img src="websiteone.jpg" />  
+                                <div class="content">1/2</div>  
+                            </div>  
+                            <div class="showSlide fade">  
+                                <img src="websitetwo.jpg" />  
+                                <div class="content">2/2</div>  
+                            </div>   
+                            <!-- Navigation arrows -->  
+                            <a class="left" onclick="nextSlide(-1)">❮</a>  
+                            <a class="right" onclick="nextSlide(1)">❯</a>  
+                        </div>  
+                        <h6>Screen shots of my previous websites</h6>
+                    </div>
+                </div>
+                <div class="rightcolumn">
+                    <div class="card">
+                        <h2>About Me</h2>
+                        <img src="selfie.jpg" style="width:100%;">
+                        <p>My Name Is Jordan Layton. I currently work as a supervisor at Cherry Lane Garden Center. </p>
+                        <p>Learn more <a href="#about-me">about me</a></p>
+                    </div>
+                    <div class="card">
+                        <h3>Follow Me</h3>
+                        <a href="https://www.facebook.com/jordan.layton.5"><img src="facebook-logo.jpg" style="height:80px;" alt="Facebook - https://www.facebook.com/jordan.layton.5"></a>
+                        <a href="https://www.linkedin.com/in/jordan-layton-7593b4202/"><img src="linkedin-logo.jpg" style="height:80px;" alt="linked in - https://www.linkedin.com/in/jordan-layton-7593b4202/"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <h2 style="float:left;">Website Made by Jordan Layton</h2>
+            <h2 style="float:right;"><a href="#about">About</a></h2>
+        </div>
+    <script type="text/javascript">  
+        var slide_index = 1;  
+        displaySlides(slide_index);  
+  
+        function nextSlide(n) {  
+            displaySlides(slide_index += n);  
+        }  
+  
+        function currentSlide(n) {  
+            displaySlides(slide_index = n);  
+        }  
+  
+        function displaySlides(n) {  
+            var i;  
+            var slides = document.getElementsByClassName("showSlide");  
+            if (n > slides.length) { slide_index = 1 }  
+            if (n < 1) { slide_index = slides.length }  
+            for (i = 0; i < slides.length; i++) {  
+                slides[i].style.display = "none";  
+            }  
+            slides[slide_index - 1].style.display = "block";  
+        }  
+    </script>
+    </body>
+</html>

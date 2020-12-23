@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <title>Home - Jordan's Website</title>
+		
+        </head>
+        <style>
+            html {
+                position: relative;
+                min-height: 100%;
+                font-family: "arial";
+            }
+            body {
+                font-size: 150%;
+                background-color: white;
+                font-family: "arial";
+            }
+            .nav ul {
+                font-family: arial;
+                font-weight: bold;
+                text-transform: uppercase;
+                position: absolute;
+                width: 100%;
+                left: 0;
+                top: 0px;
+                height: 47px;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: black;
+            }
+            .nav li {
+                
+            }
+            .nav li a {
+                display: block;
+                color: grey;
+                text-align: center;
+                padding: 4px 16px 0px 16px;
+                text-decoration: none;
+            }
+            .nav li a:hover:not(.active) {
+                color: lightgrey;
+            }
+            .nav .active {
+                color: blue;
+            }
+            .nav li:last-child {
+                float: right;
+                border-right: none;
+            }
+            .nav li:first-child {
+                border-left: none;
+            }
+            .nav .header {
+                float: none;
+            }
+            
+            .mirror {
+                background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 34%, rgba(155, 155, 155, 1));
+            -webkit-background-clip: text;
+            color: transparent;
+            transform: rotateX(180deg);
+            }
+            .nav-mirror ul {
+                font-family: arial;
+                font-weight: bold;
+                text-transform: uppercase;
+                position: absolute;
+                width: 100%;
+                left: 0;
+                top: 20px;
+                height: 26px;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+            .nav-mirror li {
+                
+            }
+            .nav-mirror li a {
+                display: block;
+                text-align: center;
+                padding: 4px 16px 0px 16px;
+                text-decoration: none;
+            }
+            .nav-mirror li a:hover:not(.active) {
+                
+            }
+            .nav-mirror .active {
+                background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 34%, rgba(0, 0, 255, 1));
+            -webkit-background-clip: text;
+            color: transparent;
+            }
+            .nav-mirror li:last-child {
+                float: right;
+            }
+            
+            .footer {
+                background-color: darkgrey;
+                color: white;
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                overflow: hidden;
+                font-size: 50%;
+            }
+            .footer p {
+                font-family: arial;
+                padding-left: 5px;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            .main {
+                padding-left: 100px;
+                padding-right: 100px;
+                text-align: center;
+            }
+            .main h1 {
+                color: blue;
+                text-transform: uppercase;
+            }
+            .main p {
+                padding: 50px;
+            }
+            .line {
+            border: 1px solid blue;
+            border-radius: 10px;
+            text-align: center;
+            
+            }
+            .intro {
+                background-color: black;
+                color: white;
+                text-align: center;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top:0;
+                left:0;
+                font-size: 300%;
+                text-transform: uppercase;
+            }
+            .intro-mirror {
+                background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 34%, rgba(155, 155, 155, 1));
+                -webkit-background-clip: text;
+                color: transparent;
+                transform: rotateX(180deg);
+                text-align: center;
+                position: absolute;
+                width: 100%;
+                top:120px;
+                left:0;
+                font-size: 300%;
+                text-transform: uppercase;
+            }
+            .enter {
+                color: white;
+                text-align: center;
+                position: fixed;
+                padding-top: 350px;
+                width: 100%;
+                top:0;
+                left:0;
+                font-size: 300%;
+                text-transform: uppercase;
+                text-decoration: none;
+            }
+            .enter a{
+                color: white;
+            }
+            .enter a:hover {
+                color: blue;
+            }
+        </style>
+        <body>
+            
+            
+            
+            <div class="main">
+        <br>
+        <h1>Hello</h1>
+        <p><strong>Welcome</strong> to my website</P>
+        <h1 class="line"></h1>
+        <p><strong>I</strong> am Jordan and this is my project website I am making.</p>
+        <h1 class="line"></h1>
+        <p><strong>Please</strong> feel free to have a look around</p>
+        </div>
+            
+            <div class="nav">
+                <ul>
+                    <li style="float:left"><a href="https://jordanlayton.github.io/home">Home</a></li>
+                    <li style="float:left"><a href="https://jordanlayton.github.io/about-me">About Me</a></li>
+                    <li style="float:left"><a href="https://jordanlayton.github.io/my-friends-and-family">My Friends & Family</a></li>  
+                    <li style="float:right"><a class="active" href="https://jordanlayton.github.io/contact-me">Contact Me</a></li>
+                    <li style="float:left"><a href="https://jordanlayton.github.io/how-i-started-coding">How I Started Coding</a></li>
+                </ul>
+            </div>
+            <div class="nav-mirror">
+                <ul>
+                    <li style="float:left"><a class="mirror">Home</a></li>
+                    <li style="float:left"><a class="mirror" >About Me</a></li>
+                    <li style="float:left"><a class="mirror" >My Friends & Family</a></li>
+                    <li style="float:right"><a class="mirror active" >Contact Me</a></li>
+                    <li style="float:left"><a class="mirror" >How I Started Coding</a></li>
+                </ul>
+            </div>
+            <div class="footer">
+                <p>
+                    Website made by Jordan Layton
+                </p>
+                <p>
+                </p>
+            </div>
+            
+        </body>
+    </html>
