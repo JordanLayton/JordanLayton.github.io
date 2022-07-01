@@ -107,6 +107,7 @@ ul.topnav li.nav-right {
     padding: 20px;
 }
 .card {
+    border-radius: 25px;
     background-color: white;
     padding: 40px;
     margin-top: 20px;
