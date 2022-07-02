@@ -10,6 +10,12 @@ body {
     color: darkblue;
     width: 100%;
     font-size: 150%;
+    background: src="welcomeBackdrop.jpg";
+    background-size: cover;
+    color: #fff;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    padding: 0;
 }
 .header h1 {
     font-family: Arial, Helvetica, sans-serif;
