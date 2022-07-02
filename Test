@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jordans Website / Home</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+	</head>
+<style>
+
+</style>
+<body>
+    <div class="menu">
+        <a class="button" href="">About Me</a>
+        <a class="button" href="">My Projects</a>
+    </div>
+    <div class="header">
+        <h1>
+            Hello!
+        </h1>
+        <p>
+            Welcome to my website
+            <br>
+            <br>
+            Scroll Down
+        </p>
+    </div>
+    <div class="content">
+        <div class="row">
+            <div class="card">
+                <img src="https://www.logolynx.com/images/logolynx/9e/9e18b988045225067ee6f38eb8928223.png" style="width:100%;">
+            </div>
+            <div class="card">
+                <p class="fakeimg">Hotel.Inc
+                </p>
+            </div>
+            <div class="card">
+                <p class="fakeimg">Phone.Inc
+                </p>
+            </div>
+            <div class="card">
+                <p class="fakeimg">Uni
+                </p>
+            </div>
+            <div class="card">
+                <p class="fakeimg">Rota
+                </p>
+            </div>
+            <div class="card">
+                <p class="fakeimg">Work
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <h2 style="float:left;">Website Made by Jordan Layton</h2>
+        <h2 style="float:right;"><a href="#about">About</a></h2>
+    </div>
+</body>
