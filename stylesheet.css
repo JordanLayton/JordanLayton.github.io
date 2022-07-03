@@ -1,20 +1,75 @@
 html {
     position: relative;
 }
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size:100%;
+    margin: 0px;
+    background-color: var(--cnt-color);
+    
+    overflow-x: hidden;
 }
+
+:root {
+    color-scheme:light dark;
+    --title-color: rgb(83, 83, 83);
+    --bkgd-color: white;
+    --cnt-color: rgb(236, 236, 236);
+    --cntText-color: black;
+    --card-color: white;
+}
+
+@media (prefers-color-scheme:dark) {
+    :root {
+        --title-color: white;
+        --Bkgd-color: black;
+        --cnt-color: black;
+        --cnt-Text:white;
+        --card-color: rgb(35, 35, 35);
+    }
+}
+
 .header {
     text-align: center;
     width: 100%;
-    height:100vh;
+    height:80vh;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
     text-align:center;
+    background-color: white;
+    line-height: 0vh;
     color: var(--title-color);
+}
+
+.header h1 {
+    color:aquamarine;
+    font-size: 500%;
+    background-color: white;
+}
+
+.bottomHeader {
+    text-align: center;
+    width: 100%;
+    height:20vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background-color: white;
+    color: grey;
+}
+
+.menu {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    background-color: white;
+    width: 100%;
+    float: right;
+
 }
 .button {
     text-decoration:none;
@@ -24,14 +79,18 @@ body {
     border-radius:10px;
     margin:5px;
     float:right;
+    border:white 1px solid;
+    background-color:white;
+    
 }
 * {
     box-sizing: border-box;
 }
 .content {
-    padding: 20px;
-    background: rgb(242, 242, 242);
-    min-height: 85vh;
+    padding: 0px;
+    background-color: var(--cnt-color);
+    min-height: 100%;
+    
 }
 .fakeimg {
     background-color: #aaa;
@@ -41,26 +100,50 @@ body {
 }
 .card {
     border-radius: 25px;
-    background-color: white;
+    background-color: var(--card-color);
+    padding: 1vh;
+    margin: 1vh;
+    float:left;
+    width: 98.5%;
+    text-align:center;
+    font-size: 150%;
+    min-height: 80vh;
+
+}
+
+.card:hover {
+    background-color: darkgrey;
+}
+
+.fullCard {
+    border-radius: 25px;
+    background-color: var(--card-color);
     padding: 1vh;
     margin: 1vh;
     float:left;
     width: 95%;
     text-align:center;
     font-size: 150%;
+    min-height: 33vh;
+
+}
+
+.fullCard:hover {
+    background-color: darkgrey;
 }
 
 @media (min-width: 600px) {
-    .card {
+    .fullCard {
         width:47%;
-        height: 50vh;
+        height: 42vh;
     }
     .header {
         font-size: 150%;
     }
+    
 }
 @media (min-width: 1000px) {
-    .card {
+    .fullCard {
         width: 31%;
         height: 33vh;
     }
@@ -69,7 +152,7 @@ body {
     }
 }
 @media (min-width: 1200px) {
-    .card {
+    .fullCard {
         width:23%;
         height: 25vh;
     }
@@ -77,6 +160,372 @@ body {
         font-size: 250%;
     }
 }
+
+.halfCard {
+    border-radius: 25px;
+    background-color: var(--card-color);
+    padding: 1vh;
+    margin: 1vh;
+    float:left;
+    width: 47%;
+    text-align:center;
+    font-size: 150%;
+    min-height: 33vh;
+}
+
+.halfCard:hover {
+    background-color: darkgrey;
+}
+
+@media (min-width: 600px) {
+    .halfCard {
+        width:22.5%;
+        height: 42vh;
+    }
+    .header {
+        font-size: 150%;
+    }
+    
+}
+@media (min-width: 1000px) {
+    .halfCard {
+        width: 15%;
+        height: 33vh;
+    }
+    .header {
+        font-size: 200%;
+    }
+}
+@media (min-width: 1200px) {
+    .halfCard {
+        width:11%;
+        height: 25vh;
+    }
+    .header {
+        font-size: 250%;
+    }
+}
+
+.doubleHCard {
+    border-radius: 25px;
+    background-color: var(--card-color);
+    padding: 1vh;
+    margin: 1vh;
+    float:left;
+    width: 95%;
+    text-align:center;
+    font-size: 150%;
+    min-height: 65vh;
+}
+
+.doubleHCard:hover {
+    background-color: darkgrey;
+}
+
+@media (min-width: 600px) {
+    .doubleHCard {
+        width:47%;
+        height: 85.7vh;
+    }
+    .header {
+        font-size: 150%;
+    }
+    
+}
+@media (min-width: 1000px) {
+    .doubleHCard {
+        width: 31%;
+        height: 67.9vh;
+    }
+    .header {
+        font-size: 200%;
+    }
+}
+@media (min-width: 1200px) {
+    .doubleHCard {
+        width:23%;
+        height: 67.9vh;
+    }
+    .header {
+        font-size: 250%;
+    }
+}
+
+.doubleWCard {
+    border-radius: 25px;
+    background-color: var(--card-color);
+    padding: 1vh;
+    margin: 1vh;
+    float:left;
+    width: 95%;
+    text-align:center;
+    font-size: 150%;
+    min-height: 33vh;
+}
+
+.doubleWCard:hover {
+    background-color: darkgrey;
+}
+
+@media (min-width: 600px) {
+    .doubleWCard {
+        width:95%;
+        height: 42vh;
+    }
+    .header {
+        font-size: 150%;
+    }
+    
+}
+@media (min-width: 1000px) {
+    .doubleWCard {
+        width: 64%;
+        height: 33vh;
+    }
+    .header {
+        font-size: 200%;
+    }
+}
+@media (min-width: 1200px) {
+    .doubleWCard {
+        width:47.5%;
+        height: 25vh;
+    }
+    .header {
+        font-size: 250%;
+    }
+}
+
+.doubleWShrinkCard {
+    border-radius: 25px;
+    background-color: var(--card-color);
+    padding: 1vh;
+    margin: 1vh;
+    float:left;
+    width: 95%;
+    text-align:center;
+    font-size: 150%;
+    min-height: 33vh;
+}
+
+.doubleWShrinkCard:hover {
+    background-color: darkgrey;
+}
+
+@media (min-width: 600px) {
+    .doubleWShrinkCard {
+        width:95%;
+        height: 42vh;
+    }
+    .header {
+        font-size: 150%;
+    }
+    
+}
+@media (min-width: 1000px) {
+    .doubleWShrinkCard {
+        width: 64%;
+        height: 33vh;
+    }
+    .header {
+        font-size: 200%;
+    }
+}
+@media (min-width: 1200px) {
+    .doubleWShrinkCard {
+        width:23%;
+        height: 25vh;
+    }
+    .header {
+        font-size: 250%;
+    }
+}
+
+.doubleWShrinkThreeCard {
+    border-radius: 25px;
+    background-color: var(--card-color);
+    padding: 1vh;
+    margin: 1vh;
+    float:left;
+    width: 95%;
+    text-align:center;
+    font-size: 150%;
+    min-height: 33vh;
+}
+
+.doubleWShrinkThreeCard:hover {
+    background-color: darkgrey;
+}
+
+@media (min-width: 600px) {
+    .doubleWShrinkThreeCard {
+        width:95%;
+        height: 42vh;
+    }
+    .header {
+        font-size: 150%;
+    }
+    
+}
+@media (min-width: 1000px) {
+    .doubleWShrinkThreeCard {
+        width: 31%;
+        height: 33vh;
+    }
+    .header {
+        font-size: 200%;
+    }
+}
+@media (min-width: 1200px) {
+    .doubleWShrinkThreeCard {
+        width:47.5%;
+        height: 25vh;
+    }
+    .header {
+        font-size: 250%;
+    }
+}
+
+.fullDoubleThreeCard {
+    border-radius: 25px;
+    background-color: var(--card-color);
+    padding: 1vh;
+    margin: 1vh;
+    float:left;
+    width: 95%;
+    text-align:center;
+    font-size: 150%;
+    min-height: 33vh;
+}
+
+.fullDoubleThreeCard:hover {
+    background-color: darkgrey;
+}
+
+@media (min-width: 600px) {
+    .fullDoubleThreeCard {
+        width:47%;
+        height: 42vh;
+    }
+    .header {
+        font-size: 150%;
+    }
+    
+}
+@media (min-width: 1000px) {
+    .fullDoubleThreeCard {
+        width: 64%;
+        height: 33vh;
+    }
+    .header {
+        font-size: 200%;
+    }
+}
+@media (min-width: 1200px) {
+    .fullDoubleThreeCard {
+        width:23%;
+        height: 25vh;
+    }
+    .header {
+        font-size: 250%;
+    }
+}
+
+.leftCard {
+    border-radius: 25px;
+    background-color: var(--card-color);
+    padding: 1vh;
+    margin: 1vh;
+    float:left;
+    width: 5%;
+    text-align:center;
+    font-size: 150%;
+    min-height: 500vh;
+}
+
+.leftCard:hover {
+    background-color: darkgrey;
+}
+
+@media (min-width: 600px) {
+    .leftCard {
+        width:5%;
+        height: 42vh;
+    }
+    .header {
+        font-size: 150%;
+    }
+    
+}
+@media (min-width: 1000px) {
+    .leftCard {
+        width: 5%;
+        height: 33vh;
+    }
+    .header {
+        font-size: 200%;
+    }
+}
+@media (min-width: 1200px) {
+    .leftCard {
+        width:5%;
+        height: 25vh;
+    }
+    .header {
+        font-size: 250%;
+    }
+}
+
+.fullGapFillCard {
+    border-radius: 25px;
+    background-color: var(--card-color);
+    padding: 1vh;
+    margin: 1vh;
+    float:left;
+    width: 95%;
+    text-align:center;
+    font-size: 150%;
+    min-height: 33vh;
+}
+
+.fullGapFillCard:hover {
+    background-color: darkgrey;
+}
+
+@media (min-width: 600px) {
+    .fullGapFillCard {
+        width:47%;
+        height: 42vh;
+    }
+    .header {
+        font-size: 150%;
+    }
+    
+}
+@media (min-width: 1000px) {
+    .fullGapFillCard {
+        width: 31%;
+        height: 33vh;
+    }
+    .header {
+        font-size: 200%;
+    }
+}
+@media (min-width: 1200px) {
+    .fullGapFillCard {
+        width:47.5%;
+        height: 25vh;
+    }
+    .header {
+        font-size: 250%;
+    }
+}
+
+.imgBack {
+background: #ffca59;
+  border-radius: 50%;
+}
+
 .footer {
     padding: 10px;
     text-align: center;
@@ -97,93 +546,5 @@ body {
     text-decoration: none;
     color: black;
 }
-/* Photo Slider */
-/*body {  
-    margin: 0;  
-    background: #e6e6e6;  
-} 
 
-.showSlide {  
-    display: none  
-}  
-.showSlide img {  
-    width: 100%;  
-}  
-.slidercontainer {  
-    max-width: 1000px;  
-    position: relative;  
-    margin: auto;  
-}  
-.left, .right {  
-    cursor: pointer;  
-    position: absolute;  
-    top: 50%;  
-    width: auto;  
-    padding: 16px;  
-    margin-top: -22px;  
-    color: black;  
-    font-weight: bold;  
-    font-size: 18px;  
-    transition: 0.6s ease;  
-    border-radius: 0 3px 3px 0;  
-}  
-.right {  
-    right: 0;  
-    border-radius: 3px 0 0 3px;  
-}  
-.left:hover, .right:hover {  
-    background-color: rgba(115, 115, 115, 0.8);  
-}  
-/* .content {  
-    color: black;  
-    font-size: 10px;  
-    padding: 8px 12px;  
-    position: absolute;  
-    top: 90%;  
-    width: 100%;  
-    text-align: right;  
-}  
-
-.active {  
-    background-color: #717171;  
-}  
-/* Fading animation   
-.fade {  
-    -webkit-animation-name: fade;  
-    -webkit-animation-duration: 1.5s;  
-    animation-name: fade;  
-    animation-duration: 1.5s;  
-}  
-@-webkit-keyframes fade {  
-    from {  
-        opacity: .4  
-    }  
-    to {  
-        opacity: 1  
-    }  
-}  
-
-@keyframes fade {  
-    from {  
-        opacity: .4  
-    }  
-    to {  
-        opacity: 1  
-    }  
-}  
-*/
-*/ 
-
-:root {
-    color-scheme:light dark;
-    --tittle-color: black;
-    --bkgd-colot: white;
-}
-
-@media (prefers-color-scheme:dark) {
-    :root {
-        --tittle-color: white;
-        --Bkgd-color: black;
-    }
-}
 
